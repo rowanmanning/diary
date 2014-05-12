@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{site.data.meta.lang}}">
+<head>
+    
+    <!-- Page meta-information -->
+    <meta charset="utf-8"/>
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}"/>
+    {% if page.noindex %}
+        <meta name="robots" content="noindex"/>
+    {% endif %}
+
+    <!-- Site links -->
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Rowan's Diary"/>
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap"/>
+    <link rel="canonical" href="http://{{site.data.meta.host}}{{page.url | replace: 'index.html', ''}}"/>
+    {% if page.url != '/index.html': %}
+        <link rel="author" href="http://rowanmanning.com/" title="Rowan Manning"/>
+    {% endif %}
+
+</head>
+<body>
+
+    <div role="banner">
+        <a href="/">Rowan's Diary</a>
+    </div>
+
+    <div role="main">
+        {{content}}
+    </div>
+
+    <hr/>
+
+    <div role="contentinfo">
+        <small>
+            Copyright &copy; {{site.time | date: '%Y'}},
+            Rowan Manning.
+        </small>
+    </div>
+
+</body>
+</html>

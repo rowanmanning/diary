@@ -1,0 +1,16 @@
+
+# Jekyll config
+exclude:
+  - CNAME
+  - Makefile
+  - README.md
+future: false
+lsi: false
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/
+safe: true
+timezone: Europe/London
+
+# Pagination
+paginate: 2
+paginate_path: :num/

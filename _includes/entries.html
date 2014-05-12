@@ -1,0 +1,32 @@
+
+<ol>
+    {% for post in paginator.posts %}
+        <li>
+
+            <h2>
+                <a href="{{post.url}}">{{post.title}}</a>
+            </h2>
+
+            <p>
+                <img src="/entries/{{post.date | date: '%Y/%m/%d-preview.jpg'}}" alt="{{post.description}}"/>
+            </p>
+
+            <a href="{{post.url}}">permalink</a>
+
+        </li>
+    {% endfor %}
+</ol>
+
+<div>
+    {% if paginator.previous_page_path %}
+        <a href="{{paginator.previous_page_path | replace: 'index.html', ''}}" rel="prev">
+            View newer entries
+        </a>
+    {% endif %}
+    Page {{paginator.page}} of {{paginator.total_pages}}
+    {% if paginator.next_page_path %}
+        <a href="{{paginator.next_page_path}}" rel="next">
+            View older entries
+        </a>
+    {% endif %}
+</div>

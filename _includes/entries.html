@@ -1,32 +1,32 @@
 
-<ol>
-    {% for post in paginator.posts %}
-        <li>
+<div itemscope itemtype="http://schema.org/Blog">
 
-            <h2>
-                <a href="{{post.url}}">{{post.title}}</a>
-            </h2>
+    <meta itemprop="name" content="Rowan's Diary"/>
+    <meta itemprop="url" content="http://{{site.data.meta.host}}/"/>
 
-            <p>
-                <img src="/entries/{{post.date | date: '%Y/%m/%d-preview.jpg'}}" alt="{{post.description}}"/>
-            </p>
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rowan Manning"/>
+        <meta itemprop="url" content="http://rowanmanning.com/"/>
+    </div>
 
-            <a href="{{post.url}}">permalink</a>
+    <ol>
+        {% for post in paginator.posts %}
+            <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                <meta itemprop="url" content="http://{{site.data.meta.host}}{{post.url}}"/>
+                <meta itemprop="dateCreated" content="{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}"/>
 
-        </li>
-    {% endfor %}
-</ol>
+                <h2>
+                    <a href="{{post.url}}" itemprop="name">{{post.title}}</a>
+                </h2>
 
-<div>
-    {% if paginator.previous_page_path %}
-        <a href="{{paginator.previous_page_path | replace: 'index.html', ''}}" rel="prev">
-            View newer entries
-        </a>
-    {% endif %}
-    Page {{paginator.page}} of {{paginator.total_pages}}
-    {% if paginator.next_page_path %}
-        <a href="{{paginator.next_page_path}}" rel="next">
-            View older entries
-        </a>
-    {% endif %}
+                <p>
+                    <img src="/entries/{{post.date | date: '%Y/%m/%d-preview.jpg'}}" alt="{{post.description}}" itemprop="image"/>
+                </p>
+
+            </li>
+        {% endfor %}
+    </ol>
+
 </div>
+
+{% include pagination.html %}

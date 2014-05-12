@@ -5,14 +5,14 @@ noindex: true
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>Rowan's Diary</title>
+    <title>{{site.data.meta.name}}</title>
     <link href="http://{{site.data.meta.host}}{{page.url}}" rel="self"/>
     <link href="http://{{site.data.meta.host}}/"/>
     <updated>{{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}</updated>
     <id>http://{{site.data.meta.host}}{{page.url}}</id>
     <author>
-        <name>Rowan Manning</name>
-        <uri>http://rowanmanning.com/</uri>
+        <name>{{site.data.author.name}}</name>
+        <uri>{{site.data.author.url}}</uri>
     </author>
 
     {% for post in site.posts limit:30 %}

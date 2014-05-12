@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+/* Body styles */
+
+html {
+    font-size: 62.5%;
+}
+html, body {
+    border-top: 15px solid #7db578;
+}
+body {
+    border-top-color: #cae8a7;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+@media all and (max-width: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+@media all and (max-width: 640px) {
+    html, body {
+        border-top-width: 10px;
+    }
+    body {
+        font-size: 1.3em;
+    }
+}
+
+
+/* Main page wrapper */
+
+.page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Entries */
+
+.entries {
+    padding: 0;
+    list-style: none;
+}
+
+.entry dl, .entry ol, .entry ul {
+    text-align: left;
+}
+
+.entry .doodle {
+    width: auto;
+    max-width: 100%;
+}

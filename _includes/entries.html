@@ -9,9 +9,9 @@
         <meta itemprop="url" content="{{site.data.author.url}}"/>
     </div>
 
-    <ol>
+    <ol class="entries">
         {% for post in paginator.posts %}
-            <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <li class="entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="url" content="http://{{site.data.meta.host}}{{post.url}}"/>
                 <meta itemprop="dateCreated" content="{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}"/>
 
@@ -20,7 +20,7 @@
                 </h2>
 
                 <p>
-                    <img src="/entries/{{post.date | date: '%Y/%m/%d'}}-preview.jpg" alt="{{post.description}}" itemprop="image"/>
+                    <img class="doodle" src="/entries/{{post.date | date: '%Y/%m/%d'}}-preview.jpg" alt="{{post.description}}" itemprop="image"/>
                 </p>
 
             </li>

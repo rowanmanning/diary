@@ -16,24 +16,48 @@
     <link rel="canonical" href="http://{{site.data.meta.host}}{{page.url | replace: 'index.html', ''}}"/>
     <link rel="author" href="{{site.data.author.url}}" title="{{site.data.author.name}}"/>
 
+    <!-- Styles -->
+    <meta name="viewport" content="width=device-width"/>
+    <!--[if gt IE 7]><!-->
+        <link rel="stylesheet" href="/assets/style/vendor/normalize.css"/>
+        <link rel="stylesheet" href="/assets/style/site.css"/>
+    <!--<![endif]-->
+    <link rel="icon" href="/favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
 </head>
 <body>
 
-    <div role="banner">
-        <a href="/">{{site.data.meta.name}}</a>
-    </div>
+    <!--[if lte IE 8]>
+        <p style="background:#ffc;margin:0;padding:10px;">
+            <small>
+                You are using an outdated version of Internet Explorer. Parts of this site, and others,
+                may appear broken.<br/>
+                For a faster and safer browsing experience,
+                <a href="http://browsehappy.com/" target="_blank">Upgrade your browser</a>.
+            </small>
+        </p>
+    <![endif]-->
 
-    <div role="main">
-        {{content}}
-    </div>
+    <div class="page">
 
-    <hr/>
+        <div role="banner">
+            <a href="/">{{site.data.meta.name}}</a>
+        </div>
 
-    <div role="contentinfo">
-        <small>
-            Copyright &copy; {{site.time | date: '%Y'}},
-            <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
-        </small>
+        <div role="main">
+            {{content}}
+        </div>
+
+        <hr/>
+
+        <div role="contentinfo">
+            <small>
+                Copyright &copy; {{site.time | date: '%Y'}},
+                <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
+            </small>
+        </div>
+
     </div>
 
 </body>

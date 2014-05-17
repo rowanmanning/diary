@@ -12,5 +12,5 @@ safe: true
 timezone: Europe/London
 
 # Pagination
-paginate: 2
+paginate: 7
 paginate_path: :num/

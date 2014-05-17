@@ -55,6 +55,14 @@
 
     <div class="page">
 
+        {% if page.url != '/index.html' %}
+            <div role="banner">
+                <div role="navigation">
+                    <a href="/">&laquo; Back to list of entries</a>
+                </div>
+            </div>
+        {% endif %}
+
         <div role="main">
             {{content}}
         </div>

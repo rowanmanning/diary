@@ -12,12 +12,14 @@ html, body {
 body {
     border-top-color: #cae8a7;
     font-size: 1.7em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    color: #333;
 }
 
 @media all and (max-width: 1000px) {
     body {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 }
 
@@ -26,12 +28,40 @@ body {
         border-top-width: 10px;
     }
     body {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 }
 
 
-/* Main page wrapper */
+/* Basic Type */
+
+h1, h2 {
+    font-weight: normal;
+}
+h2 {
+    font-size: 1.2em;
+}
+
+a {
+    color: #4c8847;
+}
+a:visited {
+    color: #7f629c;
+}
+.secret-link, .secret-link:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 3px solid #d6d6d6;
+    color: #d6d6d6;
+}
+
+
+/* Main page layout */
 
 .page {
     max-width: 500px;
@@ -39,12 +69,29 @@ body {
     padding: 20px;
 }
 
+.footer {
+    margin-top: 80px;
+}
+
+
+/* List styling */
+
+.secret-list {
+    list-style: none;
+    padding-left: 0;
+}
+.secret-list > li {
+    display: block;
+}
+
 
 /* Entries */
 
 .entries {
-    padding: 0;
-    list-style: none;
+    margin-top: 40px;
+}
+.entry {
+    margin-bottom: 40px;
 }
 
 .entry dl, .entry ol, .entry ul {
@@ -54,4 +101,29 @@ body {
 .entry .doodle {
     width: auto;
     max-width: 100%;
+}
+
+.entry-meta {
+    font-size: 80%;
+    font-style: italic;
+}
+
+
+/* Pagination */
+
+.pagination {
+    position: relative;
+}
+.pagination .next, .pagination .prev {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.pagination .next {
+    float: right;
+    right: 0;
+}
+.pagination .prev {
+    float: left;
+    left: 0;
 }

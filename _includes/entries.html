@@ -9,19 +9,18 @@
         <meta itemprop="url" content="{{site.data.author.url}}"/>
     </div>
 
-    <ol class="entries">
+    <ol class="secret-list entries">
         {% for post in paginator.posts %}
-            <li class="entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <li class="space-large entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="url" content="http://{{site.data.meta.host}}{{post.url}}"/>
                 <meta itemprop="dateCreated" content="{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}"/>
 
-                <h2>
-                    <a href="{{post.url}}" itemprop="name">{{post.title}}</a>
-                </h2>
-
-                <p>
+                <a href="{{post.url}}" class="secret-link">
+                    <h2 itemprop="name">
+                        {{post.title}}
+                    </h2>
                     <img class="doodle" src="/image/entry/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.description}}" itemprop="image"/>
-                </p>
+                </a>
 
             </li>
         {% endfor %}

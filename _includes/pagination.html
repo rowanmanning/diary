@@ -1,14 +1,10 @@
 
-<div role="navigation">
+<div role="navigation" class="pagination">
     {% if paginator.previous_page_path %}
-        <a href="{{paginator.previous_page_path | replace: 'index.html', ''}}" rel="prev">
-            View newer entries
-        </a>
+        <a href="{{paginator.previous_page_path | replace: 'index.html', ''}}" rel="prev" title="View newer entries" class="prev">&laquo; Newer</a>
     {% endif %}
-    Page {{paginator.page}} of {{paginator.total_pages}}
+    <span class="current">Page {{paginator.page}} of {{paginator.total_pages}}</span>
     {% if paginator.next_page_path %}
-        <a href="{{paginator.next_page_path}}" rel="next">
-            View older entries
-        </a>
+        <a href="{{paginator.next_page_path}}" rel="next" title="View older entries" class="next">Older &raquo;</a>
     {% endif %}
 </div>

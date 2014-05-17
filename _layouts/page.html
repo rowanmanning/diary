@@ -41,17 +41,11 @@
 
     <div class="page">
 
-        <div role="banner">
-            <a href="/">{{site.data.meta.name}}</a>
-        </div>
-
         <div role="main">
             {{content}}
         </div>
 
-        <hr/>
-
-        <div role="contentinfo">
+        <div class="footer" role="contentinfo">
             <small>
                 Copyright &copy; {{site.time | date: '%Y'}},
                 <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.

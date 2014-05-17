@@ -5,10 +5,7 @@
     <!-- Page meta-information -->
     <meta charset="utf-8"/>
     <title>
-        {% if page.title %}
-            {{page.title}} -
-        {% endif %}
-        {{site.data.meta.name}}
+        {% if page.title %}{{page.title}} - {% endif %}{{site.data.meta.name}}
     </title>
     <meta name="description" content="{{page.description}}"/>
     {% if page.noindex %}

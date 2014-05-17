@@ -9,7 +9,7 @@ noindex: true
     {% for page in site.pages %}
         {% if page.url != '' and page.noindex != true %}
             <url>
-                <loc>http://{{site.host}}{{page.url | replace: 'index.html', ''}}</loc>
+                <loc>http://{{site.data.meta.host}}{{page.url | replace: 'index.html', ''}}</loc>
                 <lastmod>
                     {% if page.lastmod %}
                         {{page.lastmod | date: '%Y-%m-%dT%H:%M:%SZ'}}
@@ -27,7 +27,7 @@ noindex: true
     {% for post in site.posts %}
         {% if post.url != '' and post.noindex != true %}
             <url>
-                <loc>http://{{site.host}}{{post.url | replace: 'index.html', ''}}</loc>
+                <loc>http://{{site.data.meta.host}}{{post.url | replace: 'index.html', ''}}</loc>
                 <lastmod>
                     {% if post.lastmod %}
                         {{post.lastmod | date: '%Y-%m-%dT%H:%M:%SZ'}}

@@ -14,14 +14,14 @@ layout: page
 
     {{content}}
 
-    <hr/>
-
-    <div class="entry-meta">
-        Posted
-        <time datetime="{{page.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
-            {{page.date | date: '%d %B %Y'}}
-        </time>
-        by <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
+    <div>
+        <div class="entry-meta">
+            Posted
+            <time datetime="{{page.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
+                {{page.date | date: '%d %B %Y'}}
+            </time>
+            by <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
+        </div>
     </div>
 
 </div>

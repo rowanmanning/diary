@@ -7,9 +7,19 @@
     <title>
         {% if page.title %}{{page.title}} - {% endif %}{{site.data.meta.name}}
     </title>
-    <meta name="description" content="{{page.description}}"/>
+    <meta name="description" content="{{page.description | xml_escape}}"/>
     {% if page.noindex %}
         <meta name="robots" content="noindex"/>
+    {% endif %}
+
+    {% if page.isEntry %}
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:creator" content="@{{site.data.author.twitter}}"/>
+        <meta name="twitter:domain" content="{{site.data.meta.host}}">
+        <meta name="twitter:title" content="{{page.title | xml_escape}}"/>
+        <meta name="twitter:description" content="{{page.description | xml_escape}}"/>
+        <meta name="twitter:image:src" content="http://{{site.data.meta.host}}/image/entry/{{page.date | date: '%Y-%m-%d'}}.jpg"/>
     {% endif %}
 
     <!-- Site links -->

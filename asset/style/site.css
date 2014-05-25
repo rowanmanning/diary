@@ -81,6 +81,12 @@ abbr {
     display: block;
 }
 
+dd {
+    margin-left: 0;
+    margin-bottom: 1em;
+    font-size: 80%;
+}
+
 
 /* Entries */
 
@@ -91,7 +97,7 @@ abbr {
     margin-bottom: 40px;
 }
 
-.entry dl, .entry ol, .entry ul {
+.entry ol, .entry ul {
     text-align: left;
 }
 

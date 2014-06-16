@@ -1,4 +1,8 @@
 
+{% if paginator.page > 1 %}
+    {% include pagination.html %}
+{% endif %}
+
 <div itemscope itemtype="http://schema.org/Blog">
 
     <meta itemprop="name" content="{{site.data.meta.name}}"/>

@@ -5,7 +5,9 @@
     <!-- Page meta-information -->
     <meta charset="utf-8"/>
     <title>
-        {% if page.title %}{{page.title}} - {% endif %}{{site.data.meta.name}}
+        {% if page.title %}{{page.title}} - {% endif %}
+        {{site.data.meta.name}}
+        {% if paginator.page > 1 %} - Page {{paginator.page}}{% endif %}
     </title>
     <meta name="description" content="{{page.description | xml_escape}}"/>
     {% if page.noindex %}

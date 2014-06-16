@@ -5,9 +5,13 @@ layout: page
 
 <h1 clas="space">{{site.data.meta.name}}</h1>
 
-<p class="space-large">
-    I'm <a href="http://rowanmanning.com/">Rowan</a>, and this is my daily doodle diary.
-    Every day I draw what's happened and how I'm feeling.
-</p>
+{% if paginator.page <= 1 %}
+
+    <p class="space-large">
+        I'm <a href="http://rowanmanning.com/">Rowan</a>, and this is my daily doodle diary.
+        Every day I draw what's happened and how I'm feeling.
+    </p>
+
+{% endif %}
 
 {% include entries.html %}

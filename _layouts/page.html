@@ -2,25 +2,14 @@
 layout: empty
 ---
 
-<div class="page">
+<div class="page page-reading-width">
 
-    {% if page.url contains '/entry/' %}
-        <div role="banner">
-            <div role="navigation">
-                <a href="/">&laquo; Back to list of entries</a>
-            </div>
-        </div>
-    {% endif %}
+    {% include navigation.html %}
 
     <div role="main">
         {{content}}
     </div>
 
-    <div class="footer" role="contentinfo">
-        <small>
-            Copyright &copy; {{site.time | date: '%Y'}},
-            <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
-        </small>
-    </div>
+    {% include footer.html %}
 
 </div>

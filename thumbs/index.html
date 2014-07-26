@@ -1,0 +1,29 @@
+---
+title: Thumbnail View
+description: Rowan Manning's daily doodle diary displayed as thumbnails.
+layout: empty
+---
+
+<div class="page">
+
+    <div role="banner">
+        <div role="navigation">
+            <a href="/">&laquo; Back to home page</a>
+        </div>
+    </div>
+
+    <div role="main">
+        <ul class="secret-list thumb-list thumb-list-weekly clearfix">
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{post.url}}">
+                        <img class="thumb" src="/image/entry/thumb/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.title}}: {{post.description}}" title="{{post.title}}: {{post.description}}"/>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% include footer.html %}
+
+</div>

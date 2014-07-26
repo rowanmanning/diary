@@ -61,9 +61,11 @@ abbr {
 /* Main page layout */
 
 .page {
-    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
+}
+.page-reading-width {
+    max-width: 500px;
 }
 
 .footer {
@@ -120,6 +122,25 @@ dd {
 }
 
 
+/* Thumbnails */
+
+.thumb-list > li {
+    float: left;
+}
+.thumb-list .thumb {
+    width: 100%;
+    display: block;
+}
+.thumb-list-weekly > li {
+    width: 14.285714286%;
+}
+@media all and (max-width: 640px) {
+    .thumb-list-weekly > li {
+        width: 33.333333333%;
+    }
+}
+
+
 /* Pagination */
 
 .pagination {
@@ -137,4 +158,18 @@ dd {
 .pagination .prev {
     float: left;
     left: 0;
+}
+
+
+/* Clearfix */
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: '';
+}
+.clearfix:after {
+    clear: both;
 }

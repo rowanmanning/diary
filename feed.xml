@@ -30,7 +30,7 @@ noindex: true
                 </updated>
                 <id>http://{{site.data.meta.host}}{{post.url}}</id>
                 <content type="html">
-                    &lt;p&gt;&lt;img src="http://{{site.data.meta.host}}/image/entry/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.description}}" title="{{post.description}}"/&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;img src="http://{{site.data.meta.host}}/image/entry/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.description | xml_escape}}" title="{{post.description | xml_escape}}"/&gt;&lt;/p&gt;
                     {{post.content | xml_escape}}
                 </content>
                 {% for category in post.categories %}

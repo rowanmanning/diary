@@ -21,3 +21,5 @@ thumbs:
 thumbs-all:
 	@echo "Generating thumbs"
 	@sh _scripts/thumbs.sh -f
+
+.PHONY: thumbs

@@ -8,7 +8,7 @@ isEntry: true
     <h1>{{page.title}}</h1>
 
     <p>
-        <img class="doodle" src="/image/entry/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="{{page.description}}" title="{{page.description}}"/>
+        <img class="doodle" src="/image/entry/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="{{page.description | xml_escape}}" title="{{page.description | xml_escape}}"/>
     </p>
 
     {{content}}

@@ -17,7 +17,7 @@ layout: empty
             {% for post in site.posts %}
                 <li>
                     <a href="{{post.url}}">
-                        <img class="thumb" src="/image/entry/thumb/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.title}}: {{post.description}}" title="{{post.title}}: {{post.description}}"/>
+                        <img class="thumb" src="/image/entry/thumb/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="{{post.title}}: {{post.description | xml_escape}}" title="{{post.title}}: {{post.description | xml_escape}}"/>
                     </a>
                 </li>
             {% endfor %}

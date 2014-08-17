@@ -121,6 +121,31 @@ dd {
     font-style: italic;
 }
 
+.dialogue {
+    text-align: left;
+}
+.dialogue .line {
+    padding-left: 135px;
+    position: relative;
+}
+.dialogue .speaker {
+    width: 125px;
+    display: block;
+    float: left;
+    position: absolute;
+    left: 0;
+}
+@media all and (max-width: 640px) {
+    .dialogue .line {
+        padding-left: 0;
+    }
+    .dialogue .speaker {
+        width: auto;
+        float: none;
+        position: static;
+    }
+}
+
 
 /* Thumbnails */
 

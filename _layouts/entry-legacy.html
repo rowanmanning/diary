@@ -1,19 +1,17 @@
 ---
-layout: page-wide
+layout: page
 isEntry: true
 ---
 
 <div class="entry">
 
-    <h1 class="visually-hidden">{{page.title}}</h1>
+    <h1>{{page.title}}</h1>
 
     <p>
         <img class="doodle" src="/image/entry/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="{{page.description | xml_escape}}" title="{{page.description | xml_escape}}"/>
     </p>
 
-    <div class="visually-hidden">
-        {{content}}
-    </div>
+    {{content}}
 
     <div>
         <div class="entry-meta">

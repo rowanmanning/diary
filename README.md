@@ -2,6 +2,8 @@
 Rowan's Diary
 =============
 
+**Hi :wave: my doodle diary is no longer updated. It represents a portion of my life from 10th May 2014 to 23rd January 2015, so there's almost certainly some stuff in here I'm embarassed about.**
+
 This is the source code for [my daily doodle diary][site]. Every day I draw what's happened and how I'm feeling. This is public to both encourage me, and let far-away friends know what's happening.
 
 

@@ -8,8 +8,9 @@ future: false
 lsi: false
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/
-safe: true
 timezone: Europe/London
+plugins:
+  - jekyll-paginate
 
 # Pagination
 paginate: 7

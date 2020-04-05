@@ -216,3 +216,13 @@ dd {
     width: 1px !important;
     overflow: hidden;
 }
+
+
+/* All done */
+
+.all-done {
+    font-size: 80%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #fff5c3;
+}
